@@ -1,0 +1,4 @@
+# python3 -m pip install -r requirements.txt
+python-dotenv
+bech32
+ijson
