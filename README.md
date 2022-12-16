@@ -20,7 +20,7 @@ python3 -m pip install -r requirements.txt
 - Get all CW20 balances
 - Osmosis LP Airdrop (TODO)
 
-- Fairdrop (same amount to a subset of accounts)
+- Fairdrop (same amount as a subset of accounts)
 - Formula Drop (airdrop based on conditions, ex: minimum of X staked, not to CeXs, etc.)
 
 ### Other
