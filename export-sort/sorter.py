@@ -6,9 +6,13 @@ This is useful for debugging state exports and airdrops
 import ijson
 import json
 import os
-from dotenv import load_dotenv; load_dotenv()
 
 from utils import get_keys, get_export_file_location
+
+current_dir = os.path.dirname(os.path.realpath(__file__))
+parent_dir = os.path.dirname(current_dir)
+from dotenv import load_dotenv
+load_dotenv(os.path.join(parent_dir, ".env"))
 
 # Variables
 NAME = os.getenv("SNAPSHOT_CHAIN_PREFIX", "juno")
@@ -21,8 +25,8 @@ if len(exportFileLoc) == 0:
     print(f"No state export found for: {FILENAME}. Please ensure it is in the _EXPORTS folder")
     exit(1)
 
-current_dir = os.path.dirname(os.path.realpath(__file__))
-sorted_dir = os.path.join(os.path.dirname(current_dir), "_SORTED", SNAPSHOT_SORTED_FOLDER) # root of this directory
+
+sorted_dir = os.path.join(parent_dir, "_SORTED", SNAPSHOT_SORTED_FOLDER)
 os.makedirs(sorted_dir, exist_ok=True)
 
 def main():

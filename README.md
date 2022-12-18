@@ -16,12 +16,10 @@ python3 -m pip install -r requirements.txt
 
 ## Tools in this repo
 
-- state export sorter (extract more manageable files)
-- Get all CW20 balances
-- Osmosis LP Airdrop (TODO)
-
-- Fairdrop (same amount as a subset of accounts)
-- Formula Drop (airdrop based on conditions, ex: minimum of X staked, not to CeXs, etc.)
+- [State Export Sort](./export-sort/)
+- [Airdrop from CHAIN-A to NEW-CHAIN w/ formulas & excluded validators (for both bank & staking)](./native-airdrop/)
+- [CW20 balances to CSV](./cw20/to-other-cw20/)
+- [CW20 balances to new chain](./cw20/to-native-denom/)
 
 ### Other
 

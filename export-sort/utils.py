@@ -1,7 +1,8 @@
 import ijson, os, bech32
 
 current_dir = os.path.dirname(os.path.realpath(__file__))
-exports_folder = os.path.join(os.path.dirname(current_dir), "_EXPORTS")
+parent_dir = os.path.dirname(current_dir)
+exports_folder = os.path.join(parent_dir, "_EXPORTS")
 
 sections = { 
     # locations within the genesis file for ijson, every section MUST end with .item to grab the values
@@ -56,13 +57,5 @@ def get_export_file_location(filename: str) -> str:
         return ""
     
     return os.path.join(exports_folder, filename)
-
-
-def bech32encode(prefix, data):    
-    return bech32.bech32_encode(prefix, bech32.convertbits(data, 8, 5, True))
-
-def bech32decode(address):
-    prefix, data = bech32.bech32_decode(address)        
-    return prefix, bech32.convertbits(data, 5, 8, False)
 
 # print(get_export_file_location("test.txt"))

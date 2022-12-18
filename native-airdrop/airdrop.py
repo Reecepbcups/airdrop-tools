@@ -1,6 +1,5 @@
 '''
 Reece Williams | Oct 31st 2022
-
 Example script on how to read the genesis data from the state export
 '''
 
@@ -8,14 +7,15 @@ import json, os
 
 from utils import bech32encode, bech32decode
 
-from dotenv import load_dotenv
-load_dotenv()  
-
 current_dir = os.path.dirname(os.path.realpath(__file__))
+parent_dir = os.path.dirname(current_dir)
+from dotenv import load_dotenv
+load_dotenv(os.path.join(parent_dir, ".env"))
+
 
 SNAPSHOT_SORTED_FOLDER = os.getenv('SNAPSHOT_SORTED_FOLDER', 'juno_sorted')
-sorted_dir = os.path.join(os.path.dirname(current_dir), "_SORTED", SNAPSHOT_SORTED_FOLDER)
-commands_dir = os.path.join(os.path.dirname(current_dir), "_AIRDROP_COMMANDS")
+sorted_dir = os.path.join(parent_dir, "_SORTED", SNAPSHOT_SORTED_FOLDER)
+commands_dir = os.path.join(parent_dir, "_AIRDROP_COMMANDS")
 os.makedirs(sorted_dir, exist_ok=True)
 os.makedirs(commands_dir, exist_ok=True)
 

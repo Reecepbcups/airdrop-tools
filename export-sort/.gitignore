@@ -1,6 +1,0 @@
-*.json
-genesis.json
-genesis_sorted/**
-*_sorted/**
-*commands*.sh
-*.zip
