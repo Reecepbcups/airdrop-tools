@@ -2,3 +2,8 @@ CW20s/
 .env
 balances.json
 factory_mint.sh
+**/__pycache__/*
+
+_EXPORTS/*.json
+_SORTED/**/*.json
+_AIRDROP_COMMANDS/*.sh

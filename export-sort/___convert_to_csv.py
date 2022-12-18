@@ -1,5 +1,7 @@
 import os, json, bech32
 
+# TODO: read from _SORTED and export in a format for juno.tools
+
 '''
 Hi Reece- apologies for the late reply, but the tea, have been busy.  
 we are game developers who have created a virtual world using Unity3d. 

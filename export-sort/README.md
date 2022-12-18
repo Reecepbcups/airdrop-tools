@@ -1,9 +1,16 @@
 # State Export sorter
 
-Useful for airdrops & debugging any network. Build logic on top
+Useful for airdrops from one chain to a new one & debugging any network. All handled from the '.env' file
 
-## TODO
+## Guide
 
-Update it so it asks you to select files, maybe we save in an EXPORTS folder or something? Then we can pick it
+```sh
+# copy .env.example to .env
+cp .env.example .env
 
-Originally from <https://github.com/Reecepbcups/cosmos-state-export-sort>
+# edit .env to your liking
+
+# Run the sorter script (outputs to _SORTED).
+# If you plan to airdrop, ensure you have `SNAPSHOT_WANTED_SECTIONS="bank,staking"` in your .env
+python3 sorter.py
+```

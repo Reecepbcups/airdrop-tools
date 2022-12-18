@@ -1,4 +1,4 @@
-# cosmos airdrop tools
+# cosmos airdrop tools (wip)
 
 This repo houses many tools to quickly airdrop in a variety of ways to other addresses.
 
