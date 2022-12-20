@@ -1,4 +1,4 @@
-# cosmos airdrop tools (wip)
+# cosmos airdrop tools
 
 This repo houses many tools to quickly airdrop in a variety of ways to other addresses.
 
@@ -10,9 +10,17 @@ Please ensure you install the requirements from the requirements.txt file before
 python3 -m pip install -r requirements.txt
 ```
 
+---
+
 ## How To Export a Snapshot
 
 [EXPORT-GUIDE](./HOW-TO-EXPORT.md)
+
+or use my free tool
+
+[https://snapshots.reece.sh/](https://snapshots.reece.sh/)
+
+---
 
 ## Tools in this repo
 
