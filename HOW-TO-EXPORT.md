@@ -43,7 +43,7 @@ cat osmosis_state_export.json | python -c "import sys,json;json.loads(sys.stdin.
 Once the above is complete, you are ready to follow the other guides and scripts to parse, edit, and get the data into a format of your liking :)
 
 **EXTRA**
-<https://reece.sh/exports/>
+<https://exports.reece.sh/>
 
 You can compress these with the [`xz`](https://www.geeksforgeeks.org/xz-lossless-data-compression-tool-in-linux-with-examples/) command for max compression.
 
