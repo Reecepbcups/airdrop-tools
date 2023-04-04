@@ -1,5 +1,32 @@
 """
-Loops over all JSON files in CW20s folder, then converts out the actual balances
+Takes a snapshot of all NFT holders really quickly with async query requests. Then saves these into an easy JSON file you can iterate.
+
+Output Schema Format:
+
+{
+    "contract": {
+            "address": "stars1....",
+            "name": "SG721-CollectionName",
+            "code_id": "15"
+        },
+        "time": "2023-04-04 15:39:06",
+        "range": {
+            "start": 1,
+            "end": 1000
+        },
+        "holders": {
+            "stars1xxxxxxxxxxxxxxxxxxx": [
+                1,
+                5
+            ],
+            "stars1zzzzzzzzzzzzzzzzzzz": [
+                2,
+                3,
+                4
+            ]
+        }
+    }
+}
 """
 
 import asyncio
@@ -11,11 +38,8 @@ import os
 import httpx
 from httpx import AsyncClient
 
-# from dotenv import load_dotenv
-# load_dotenv()
-
-
 # cosmos.directory for Stargaze. This query is VERY taxing on the node, so be careful. Use your own node if you have it (non rate limited)
+# Please be nice to Polkachu
 REST_API_NODE = "https://stargaze-api.polkachu.com"
 
 # Adora NFTs
@@ -107,7 +131,7 @@ async def async_holders():
     # get parent contract info
     info = get_contract_info(CONTRACT_ADDRESS)
 
-    #  save holders to a file
+    # save holders to a file
     with open(
         os.path.join(NFTs, f"{CONTRACT_ADDRESS}_{START_IDX}-{END_IDX}.json"), "w"
     ) as f:
