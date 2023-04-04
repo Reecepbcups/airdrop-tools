@@ -7,3 +7,5 @@ factory_mint.sh
 _EXPORTS/*.json
 _SORTED/**/*.json
 _AIRDROP_COMMANDS/*.sh
+
+cw721-nfts/SNAPSHOTS/*.json
