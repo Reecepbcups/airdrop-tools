@@ -131,6 +131,8 @@ async def async_holders():
     # get parent contract info
     info = get_contract_info(CONTRACT_ADDRESS)
 
+    unique_holders = len(holders.keys())
+
     # save holders to a file
     with open(
         os.path.join(NFTs, f"{CONTRACT_ADDRESS}_{START_IDX}-{END_IDX}.json"), "w"
@@ -142,6 +144,7 @@ async def async_holders():
                     "address": CONTRACT_ADDRESS,
                     "name": info.get("contract_info", {}).get("label", None),
                     "code_id": info.get("contract_info", {}).get("code_id", None),
+                    "unique_holders": unique_holders,
                 },
                 "time": get_current_time(),
                 "range": {"start": START_IDX, "end": END_IDX},
