@@ -9,3 +9,5 @@ _SORTED/**/*.json
 _AIRDROP_COMMANDS/*.sh
 
 cw721-nfts/SNAPSHOTS/*.json
+
+**/mint_nfts

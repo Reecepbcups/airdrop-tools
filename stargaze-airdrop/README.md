@@ -15,8 +15,15 @@ This airdrops some collection of values to addresses as requested.
 # starsd q tx 5BF8989EF430CEFC526D8C3C74BFF015FC2D278DB9F5CC6F976695992E85D11F
 
 # SG1 Code ID on testnet  (https://docs.stargaze.zone/developers/contract-code-ids)
-CODE_ID=274
+# this is V1, not sure why V2 is not authorized? weird
+CODE_ID=271
 
 # https://github.com/public-awesome/launchpad/blob/main/packages/sg721/src/lib.rs#L105
-starsd tx wasm instantiate $CODE_ID '{"name":"Reeces NFT Collection","symbol":"TABUTEST","minter":"stars1jx8zl9598dwjwpxf8gyjpjem7r2k44vmsfut4a","collection_info":{"creator":"stars1jx8zl9598dwjwpxf8gyjpjem7r2k44vmsfut4a","description":"ye","image":"https://baseImage.com"}}' --label "ReeceTestContract" --admin stars10r39fueph9fq7a6lgswu4zdsg8t3gxlqcsme8z --from test-user --yes --node https://rpc.elgafar-1.stargaze-apis.com:443
+starsd tx wasm instantiate $CODE_ID '{"name":"Reeces NFT Collection","symbol":"TABTEST","minter":"stars1jx8zl9598dwjwpxf8gyjpjem7r2k44vmsfut4a","collection_info":{"creator":"stars1jx8zl9598dwjwpxf8gyjpjem7r2k44vmsfut4a","description":"ye","image":"https://baseImage.com"}}' --label "Rtest" --admin stars1jx8zl9598dwjwpxf8gyjpjem7r2k44vmsfut4a --from test-user --yes --node https://rpc.elgafar-1.stargaze-apis.com:443 --amount 3000000000ustars
+
+CONTRACT_ADDRESS=stars1xhfg8m92r3ewe0v0mlf80m39vluzdqjwmy2xvt2v0j03c9trt5ls3neq77
+
+# Queries & Txs
+# `owner_of`, `approval`, `approvals`, `all_operators`, `num_tokens`, `contract_info`, `nft_info`, `all_nft_info`, `tokens`, `all_tokens`, `minter`
+# https://github.com/public-awesome/launchpad/blob/main/packages/sg721/src/lib.rs#L7
 ```
