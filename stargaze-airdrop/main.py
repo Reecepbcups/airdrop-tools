@@ -46,6 +46,7 @@ FROM_ACCOUNT_NAME = "test-user"  # keyring os
 MAIN_WALLET = "stars1jx8zl9598dwjwpxf8gyjpjem7r2k44vmsfut4a"
 
 # Stargaze wallet address
+# https://studio.publicawesome.dev/contracts/sg721/?contractAddress=stars1xhfg8m92r3ewe0v0mlf80m39vluzdqjwmy2xvt2v0j03c9trt5ls3neq77
 CONTRACT_ADDRESS = "stars1xhfg8m92r3ewe0v0mlf80m39vluzdqjwmy2xvt2v0j03c9trt5ls3neq77"
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -106,6 +107,8 @@ def part1_mintToAdminAccount():
 
 
 def airdrop_ids():
+    # For a one off send, you can just use https://studio.publicawesome.dev/contracts/sg721/execute/ -> Send NFT
+
     # TODO:
     # - open a airdrop.csv file. Foramt: stargaze_addr,nft_id
     # iterate through all values, and ensure the main wallet owns all of these NFTs. If not, error.
