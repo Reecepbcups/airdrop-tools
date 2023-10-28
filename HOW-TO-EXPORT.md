@@ -3,13 +3,9 @@
 To airdrop, you will need a state export file. These come from a full node that is synced up to the network and stopped.
 These nodes typically only hold 30 days' worth of data, so ensure you take an export between now and 30 days ago. You can ensure your height is within this time by checking [Mintscan](https://hub.mintscan.io/).
 
-If you need a snapshot, use Notional's snapshot provider
-<https://snapshots.notional.ventures/>
+If you need a snapshot, use [Polkachu's snapshot provider](https://polkachu.com/tendermint_snapshots)
 
-I am working on a tool to auto-pull, grab, convert to PebbleDB, and export the state for you.
-<https://github.com/Reecepbcups/cosmosia-chain-sync>
-
-Once you have this data, you can export this data by running the following command:
+Once you have this data, you can export it by running the following command:
 
 ```bash
 # Always export in your home directory, some don't configure wasm correctly if they use a forked Cosmos SDK.
