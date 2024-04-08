@@ -24,6 +24,7 @@ or use my free tool
 
 ## Tools in this repo
 
+- [Automatic CosmWasm NFT Snapshots (stargaze)](https://github.com/Reecepbcups/stargaze-nft-snapshots)
 - [State Export Sort](./export-sort/)
 - [Airdrop from CHAIN-A to NEW-CHAIN w/ formulas & excluded validators (for both bank & staking)](./native-airdrop/)
 - [CW20 balances to CSV](./cw20/to-other-cw20/)
